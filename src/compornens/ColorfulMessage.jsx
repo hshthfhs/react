@@ -1,12 +1,14 @@
 import React from "react";
 
-const ColorfulMessage = () => {
+const ColorfulMessage = (props) => {
+  const { color, children } = props;
   // css設定
   const contentStyle = {
-    color: "blue",
+    color: color,
     fontSize: "18px"
   };
-  return <p style={contentStyle}>元気ですか</p>;
+  //　ColorfulMessageタグのテキストを取得
+  return <p style={contentStyle}>{children}</p>;
 };
 
 export default ColorfulMessage;
